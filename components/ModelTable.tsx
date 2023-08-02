@@ -53,10 +53,6 @@ export default function ModelTable<TData, TValue>({
       <TableBody>
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row) => {
-            const documentId = row
-              .getAllCells()
-              .at(row.getAllCells().length)
-              ?.getValue() as string;
             return (
               <TableRow
                 key={row.id}
